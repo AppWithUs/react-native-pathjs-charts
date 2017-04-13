@@ -15,7 +15,7 @@ See the License for the specific language governing permissions and limitations 
 
 import React, {Component} from 'react'
 import {Text as ReactText}  from 'react-native'
-import Svg,{ G, Path, Text} from 'react-native-svg'
+import Svg,{ G, Path, Text} from 'react-native-svg'¡“¶
 import { Colors, Options, cyclic, identity, fontAdapt } from './util'
 import _ from 'lodash'
 const Pie = require('paths-js/pie')
@@ -90,8 +90,8 @@ export default class PieChart extends Component {
                             fontStyle={textStyle.fontStyle}
                             fill={textStyle.fill}
                             textAnchor="middle"
-                            x={c.sector.centroid[0]}
-                            y={c.sector.centroid[1]}>{ c.item.name }</Text>
+                            x={c.sector.centroid[0] - options.margin.left}
+                            y={c.sector.centroid[1] - options.margin.top - 8}>{ c.item.name }</Text>
                     </G>
                 </G>
             )
